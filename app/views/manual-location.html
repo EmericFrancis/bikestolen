@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/location">Back</a>
+
+      <h1 class="heading-large">Where was your bike stolen?
+      </h1>
+
+      <form class="form" action="/manual-location-more-detials" method="post">
+
+        <p class="lede">We need this information so that we can refer your case and inforamtion to right the police sub department.
+          The next page will allow you to provide specfics of where your bike was stolen.
+        </p>
+
+        <label class="form-label" for="county">
+          County
+          <span class="form-hint">
+            County your bike was stolen in.
+            <br>
+            For example, ‘Devon, Dorset’.
+          </span>
+        </label>
+        <input class="form-control" id="county" type="text" name="county">
+
+        <label style="padding: 1em 0 0 0;" class="form-label" for="town">
+          Town/city
+          <span class="form-hint">
+            Town/city your bike was stolen in.
+            <br>
+            For example, ‘Exeter , London, Tavistock’.
+          </span>
+        </label>
+        <input class="form-control" id="town" type="text" name="town">
+
+
+        <div style="padding: 1em 0 0 0;" class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

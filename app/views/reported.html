@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/start-page">Back</a>
+
+      <form class="form" action="/location" method="post">
+
+        <div class="form-group">
+          <fieldset>
+
+              <legend>
+                <h1 class="heading-large">Have you already reported the incident to the police?</h1>
+              </legend>
+
+              <p class="lede">If you have already reported the incident to the police you will be able to skip a few sections of this service</p>
+
+              <div class="multiple-choice">
+                <input id="radio-1" type="radio" name="reported" value="Yes" {{checked("reported","Yes")}}>
+                <label for="radio-1">Yes</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="radio-2" type="radio" name="reported" value="No" {{checked("reported","No")}}>
+                <label for="radio-2">No</label>
+              </div>
+
+            </fieldset>
+
+
+        <div style="padding: 1em 0 0 0;" class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

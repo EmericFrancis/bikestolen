@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/location">Back</a>
+
+      <form class="form" action="description" method="post">
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">Contact Detials
+              </h1>
+            </legend>
+
+            <label class="form-label">Full Name</label>
+            <input class="form-control" type="text" name="full-name">
+
+            <label class="form-label">E-mail Address</label>
+            <input class="form-control" type="text" name="E-mail">
+
+            <label class="form-label">Prefered Contact Number</label>
+            <input class="form-control" type="text" name="Number">
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+      </div>
+
+  </div>
+</main>
+
+{% endblock %}

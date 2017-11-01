@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/manual-location">Back</a>
+
+      <h1 class="heading-large">Where was your bike stolen from?
+      </h1>
+
+      <form class="form" action="/contact-detials" method="post">
+
+        <p class="lede">Now you can provide us with specfic detials of where exactly your bike was stolen from. Please try and provide
+          as accurate of a description as you can.
+        </p>
+
+        <label class="form-label" for="street">
+          Street
+          <span class="form-hint">
+            The street your bije was stolen from
+            <br>
+            For example, ‘Simmons way’.
+          </span>
+        </label>
+        <input class="form-control" id="street" type="text" name="street">
+
+        <label style="padding: 1em 0 0 0;" class="form-label" for="building">
+          Building
+          <span class="form-hint">
+            The nearest building or building your bike was stolen from.
+            <br>
+            For example, ‘Libray, 42, Hospital’.
+          </span>
+        </label>
+        <input class="form-control" id="building" type="text" name="building">
+
+        <label style="padding: 1em 0 0 0;" class="form-label" for="textarea">
+          Extra detials
+        </label>
+        <textarea class="form-control form-control-3-4" name="extra-detials" id="textarea" rows="5"></textarea>
+
+        <div style="padding: 1em 0 0 0;" class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

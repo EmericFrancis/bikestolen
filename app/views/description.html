@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="/contact-detials">Back</a>
+
+      <form class="form" action="/check-your-answers" method="post">
+
+        <div class="form-group">
+
+          <fieldset>
+
+
+            <legend>
+              <h1 class="heading-large">Bike Description</h1>
+            </legend>
+
+            <p class="lede">Please provide an accurate description of the bike it should include make, model, colour and any unique indicators/modifications.</p>
+
+            <label class="form-label" for="textarea">
+              Please write decription in here.
+            </label>
+            <textarea class="form-control form-control-3-4" name="description" id="textarea" rows="5"></textarea>
+
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
