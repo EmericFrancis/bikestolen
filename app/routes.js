@@ -30,11 +30,11 @@ router.post('/map', function(req, res) {
   }
 })
 
-router.post('/contact-detials', function(req, res) {
+router.post('/contact-details', function(req, res) {
   var correctlocation = req.session.data['map']
 
   if (correctlocation == "Yes"){
-    res.redirect('/contact-detials')
+    res.redirect('/contact-details')
   }
 
   else{
