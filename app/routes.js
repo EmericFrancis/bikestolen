@@ -14,7 +14,7 @@ router.post('/location', function(req, res) {
   }
 
   else{
-    res.redirect('/ineligible')
+    res.redirect('/tracking')
   }
 })
 
@@ -32,7 +32,6 @@ router.post('/map', function(req, res) {
 
 router.post('/contact-details', function(req, res) {
   var correctlocation = req.session.data['map']
-  var
 
   if (correctlocation == "No"){
     res.redirect('/manual-location')
