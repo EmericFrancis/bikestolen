@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="/01/description" class="link-back">Back</a>
+
+      <h1 class="heading-large">
+        Check your answers before sending your application
+      </h1>
+
+
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="heading-medium">
+        Personal details
+      </h2>
+
+      <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+      <!--   * `cya-questions-short` for short questions -->
+      <!--   * `cya-questions-long` for long questions -->
+      <!--   * none for single group of q&a -->
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Full Name
+          </dt>
+          <dd>
+            {{data['full-name']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            E-mail Adress
+          </dt>
+          <dd class="cya-answer">
+            {{data['E-mail']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Contact Number
+          </dt>
+          <dd class="cya-answer">
+            {{data['Number']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="heading-medium">
+        Application details
+      </h2>
+
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Is the theft already repported?
+          </dt>
+          <dd class="cya-answer">
+            {{data['reported']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Location theft took place.
+          </dt>
+          <dd class="cya-answer">
+            HM Land Registry Plymouth
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
+            Bike Description
+          </dt>
+          <dd class="cya-answer">
+            {{data['description']}}
+          </dd>
+          <dd class="cya-change">
+            <a href="#">
+              Change<span class="visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="heading-medium">Now send your report</h2>
+
+      <div class="notice">
+        <i class="icon icon-important">
+        </i>
+        <strong  class="bold-small">
+          You are about to report a crime you can be fined upto £5000 and face imprisoment for face aqusations and wasting police time.
+        </strong>
+      </div>
+
+      <div style="margin: 1em 0 0 0;" class="form-group">
+        <a href="/01/confirmation" class="button">Accept and report</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
