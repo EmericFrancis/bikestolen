@@ -32,13 +32,14 @@ router.post('/map', function(req, res) {
 
 router.post('/contact-details', function(req, res) {
   var correctlocation = req.session.data['map']
+  var
 
-  if (correctlocation == "Yes"){
-    res.redirect('/contact-details')
+  if (correctlocation == "No"){
+    res.redirect('/manual-location')
   }
 
   else{
-    res.redirect('/manual-location')
+    res.redirect('/contact-details')
   }
 })
 
