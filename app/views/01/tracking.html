@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/01/reported">Back</a>
+
+      <form class="form" action="/01/tracking-details" method="post">
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">Please provide your crime refrence number.
+              </h1>
+            </legend>
+
+            <p class="lede">When you reported the crime you will have been given a crime refrence number. We can use
+              this number to track the progress of your case.
+            </p>
+
+            <div class="form-group">
+              <label class="form-label">Crime Refrecne Number</label>
+              <input class="form-control" type="text" name="crime-refrence">
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+      </div>
+
+  </div>
+</main>
+
+{% endblock %}
