@@ -32,7 +32,7 @@ router.post('/map', function(req, res) {
 
 router.post('/contact-details', function(req, res) {
   var correctlocation = req.session.data['map']
-  var
+
 
   if (correctlocation == "No"){
     res.redirect('/manual-location')
